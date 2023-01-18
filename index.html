@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+  <link rel="shortcut icon" href="/image/favicon-index.ico">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>首页-dabintech</title>
+  <link href="./css/gray.css" rel="stylesheet">
+<style>
+* {
+	padding: 0;
+	margin: 0;
+}
+body {
+  text-align: center;
+  background: url(https://cloud.dabintech.xyz/resource/img/miku.webp) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+  color: #79ae89;
+  font-family: 'Roboto Condensed', sans-serif;
+  overflow: hidden;
+  user-select: none;
+}
+
+.column,
+.colon,
+.colonA,
+.colonB {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 86px;
+  line-height: 86px;
+}
+
+.column {
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+}
+
+.colon,
+.colonA,
+.colonB {
+  -webkit-transition: -webkit-transform 300ms;
+  transition: -webkit-transform 300ms;
+  transition: transform 300ms;
+  transition: transform 300ms, -webkit-transform 300ms;
+  -webkit-transform: translateY(calc(50vh - 43px));
+          transform: translateY(calc(50vh - 43px));
+}
+.colon:after {
+  content: ':';
+  text-shadow: 0px 0px 20px rgb(255 255 255 / 40%);
+}
+.colonA:after {
+  content: '：';
+}
+.colonB:after {
+  content: '：';
+}
+
+.num {
+  -webkit-transition: opacity 500ms, text-shadow 100ms;
+  transition: opacity 500ms, text-shadow 100ms;
+  opacity: 0.015;
+  text-shadow: 0px 0px 4px #94ae9c99
+  
+}
+.num.visible {
+  opacity: 1.0;
+  text-shadow: 0px 0px 4px #2c5c3a
+}
+.num.close {
+  opacity: 0.5;
+  text-shadow: 0px 0px 4px #94ae9c99
+}
+.num.far {
+  opacity: 0.375;
+  text-shadow: 0px 0px 4px #94ae9c99
+}
+.num.very_far {
+  opacity: 0.25;
+  text-shadow: 0px 0px 4px #94ae9c99
+}
+.num.distant {
+  opacity: 0.125;
+  text-shadow: 0px 0px 4px #94ae9c99
+}
+.num.very_distant {
+  opacity: 0.05;
+  text-shadow: 0px 0px 4px #94ae9c99
+}
+
+.navbar,
+.navbar ul {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.navbar {
+	position: fixed;
+	padding: 20px;
+	border-radius: 50px;
+        z-index: 1000;
+}
+.navbar input {
+	width: 50px;
+	height: 50px;
+	cursor: pointer;
+	opacity: 0;
+}
+.navbar span {
+	position: absolute;
+	left: 25px;
+	top: calc(50% - 10px);
+	width: 30px;
+	height: 4px;
+	border-radius: 15px;
+	background-color: #aaaaaa;
+	pointer-events: none;
+	transition: transform 0.15s ease-in-out, top 0.15s ease-in-out 0.15s;
+}
+.navbar span:nth-child(3) {
+	top: calc(50% + 6px);
+}
+.navbar ul {
+	width: 0;
+	overflow: hidden;
+	white-space: nowrap;
+	transition: all 0.45s;
+}
+.navbar ul li {
+	list-style: none;
+	margin: 0 15px;
+}
+.navbar ul li a {
+	text-decoration: none;
+	font-size: 20px;
+	font-weight: 700;
+	color: #ffffff;
+}
+.navbar ul li a:hover {
+	color: #aaaaaa;
+}
+.navbar input:checked ~ ul {
+	width: 440px;
+}
+.navbar input:checked ~ span:nth-child(2) {
+	top: calc(50% - 2px);
+	transform: rotate(-45deg);
+	background-color: #aaaaaa;
+	transition: top 0.15s ease-in-out, transform 0.15s ease-in-out 0.15s;
+}
+.navbar input:checked ~ span:nth-child(3) {
+	top: calc(50% - 2px);
+	transform: rotate(45deg);
+	background-color: #aaaaaa;
+	transition: top 0.15s ease-in-out, transform 0.15s ease-in-out 0.15s;
+}
+
+</style>
+</head>
+
+<body>
+<div class="navbar">
+			<input type="checkbox" />
+			<span></span>
+			<span></span>
+			<ul>
+				<li><a href="#">主页</a></li>
+				<li><a href="https://blog.dabintech.xyz">博客</a></li>
+				<li><a href="https://dabintech.xyz">下载站</a></li>
+				<li><a href="https://www.dabintech.xyz/tool/bingwallpaper.php">Bing壁纸接口（坏）</a></li>
+			</ul>
+		</div>
+<div class="column">
+  <div class="num">0</div>
+  <div class="num">1</div>
+  <div class="num">2</div>
+</div>
+<div class="column">
+  <div class="num">0</div>
+  <div class="num">1</div>
+  <div class="num">2</div>
+  <div class="num">3</div>
+  <div class="num">4</div>
+  <div class="num">5</div>
+  <div class="num">6</div>
+  <div class="num">7</div>
+  <div class="num">8</div>
+  <div class="num">9</div>
+</div>
+<div class="colon"></div>
+<div class="column">
+  <div class="num">0</div>
+  <div class="num">1</div>
+  <div class="num">2</div>
+  <div class="num">3</div>
+  <div class="num">4</div>
+  <div class="num">5</div>
+</div>
+<div class="column">
+  <div class="num">0</div>
+  <div class="num">1</div>
+  <div class="num">2</div>
+  <div class="num">3</div>
+  <div class="num">4</div>
+  <div class="num">5</div>
+  <div class="num">6</div>
+  <div class="num">7</div>
+  <div class="num">8</div>
+  <div class="num">9</div>
+</div>
+<div class="colon"></div>
+<div class="column">
+  <div class="num">0</div>
+  <div class="num">1</div>
+  <div class="num">2</div>
+  <div class="num">3</div>
+  <div class="num">4</div>
+  <div class="num">5</div>
+</div>
+<div class="column">
+  <div class="num">0</div>
+  <div class="num">1</div>
+  <div class="num">2</div>
+  <div class="num">3</div>
+  <div class="num">4</div>
+  <div class="num">5</div>
+  <div class="num">6</div>
+  <div class="num">7</div>
+  <div class="num">8</div>
+  <div class="num">9</div>
+</div>
+<script>{
+var size = 86;
+var columns = Array.from(document.getElementsByClassName('column'));
+var d = void 0,
+  c = void 0;
+var classList = ['visible', 'close', 'far', 'very_far', 'distant', 'very_distant'];
+var use24HourClock = true;
+
+function padClock(p, n) {
+  return p + ('0' + n).slice(-2);
+}
+
+function getClock() {
+  d = new Date();
+  return [use24HourClock ? d.getHours() : d.getHours() % 12 || 12, d.getMinutes(), d.getSeconds()].reduce(padClock, '');
+}
+
+function getClass(n, i2) {
+  return classList.find(function (class_, classIndex) {
+    return Math.abs(n - i2) === classIndex;
+  }) || '';
+}
+
+var loop = setInterval(function () {
+  c = getClock();
+
+  columns.forEach(function (ele, i) {
+    var n = +c[i];
+    var offset = -n * size;
+    ele.style.transform = 'translateY(calc(50vh + ' + offset + 'px - ' + size / 2 + 'px))';
+    Array.from(ele.children).forEach(function (ele2, i2) {
+      ele2.className = 'num ' + getClass(n, i2);
+    });
+  });
+}, 200 + Math.E * 10);
+}
+</script>
+</body>
+
+</html>
